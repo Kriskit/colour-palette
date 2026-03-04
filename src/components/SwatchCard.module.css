@@ -1,0 +1,66 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-elevated);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent);
+}
+
+.card:active {
+  transform: translateY(0);
+}
+
+.colour {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--swatch-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.info {
+  padding: 0.5rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.hex {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 640px) {
+  .info {
+    padding: 0.35rem 0.4rem;
+  }
+
+  .hex {
+    font-size: 0.65rem;
+  }
+
+  .name {
+    font-size: 0.6rem;
+  }
+}
